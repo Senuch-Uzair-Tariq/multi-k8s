@@ -1,6 +1,7 @@
-docker build -t senuch/multi-client:latest -t senuch/multi-client:$SHA -f ./complex/client ./complex/client
-docker build -t senuch/multi-server:latest -t senuch/multi-server:$SHA -f ./complex/server ./complex/server
-docker build -t senuch/multi-worker:latest -t senuch/multi-worker:$SHA -f ./complex/worker ./complex/worker
+docker build -t senuch/multi-client:latest -t senuch/multi-client:$SHA -f ./complex/client/Dockerfile ./complex/client
+docker build -t senuch/multi-server:latest -t senuch/multi-server:$SHA -f ./complex/server/Dockerfile ./complex/server
+docker build -t senuch/multi-worker:latest -t senuch/multi-worker:$SHA -f ./complex/worker/Dockerfile ./complex/worker
+
 docker push senuch/multi-client:latest
 docker push senuch/multi-server:latest
 docker push senuch/multi-worker:latest
